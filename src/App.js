@@ -1,5 +1,6 @@
 import "./styles.css";
 import { useState } from "react";
+import TextField from "@mui/material/TextField";
 
 function App() {
   const [data, setData] = useState(null);
@@ -30,13 +31,14 @@ function App() {
 
   return (
     <div className="grid">
-      <input
-        type="text"
+      <TextField
         className="input"
-        name="input"
+        required
+        id="outlined-required"
+        label="Pass Key"
         placeholder="Pass Key"
         onChange={getData}
-      ></input>
+      />
       <button onClick={(e) => addNumber(e)} value="1">
         1
       </button>
